@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yqdz.wms.mapper.SupplierMapper">
+
+    <resultMap id="BaseResultMap" type="com.yqdz.wms.model.domain.Supplier">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="supplierCode" column="supplier_code" jdbcType="CHAR"/>
+            <result property="supplierName" column="supplier_name" jdbcType="VARCHAR"/>
+            <result property="createdBy" column="created_by" jdbcType="VARCHAR"/>
+            <result property="createdTime" column="created_time" jdbcType="TIMESTAMP"/>
+            <result property="updatedBy" column="updated_by" jdbcType="VARCHAR"/>
+            <result property="updatedTime" column="updated_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,supplier_code,supplier_name,
+        created_by,created_time,updated_by,
+        updated_time
+    </sql>
+</mapper>

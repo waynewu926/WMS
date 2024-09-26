@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yqdz.wms.mapper.OutboundDetailMapper">
+
+    <resultMap id="BaseResultMap" type="com.yqdz.wms.model.domain.OutboundDetail">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="outboundNum" column="outbound_num" jdbcType="VARCHAR"/>
+            <result property="itemNum" column="item_num" jdbcType="VARCHAR"/>
+            <result property="packagingCapacity" column="packaging_capacity" jdbcType="INTEGER"/>
+            <result property="planQuantity" column="plan_quantity" jdbcType="INTEGER"/>
+            <result property="realQuantity" column="real_quantity" jdbcType="INTEGER"/>
+            <result property="itemStatus" column="item_status" jdbcType="INTEGER"/>
+            <result property="createdBy" column="created_by" jdbcType="VARCHAR"/>
+            <result property="createdTime" column="created_time" jdbcType="TIMESTAMP"/>
+            <result property="updatedBy" column="updated_by" jdbcType="VARCHAR"/>
+            <result property="updatedTime" column="updated_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,outbound_num,item_num,
+        packaging_capacity,plan_quantity,real_quantity,
+        item_status,created_by,created_time,
+        updated_by,updated_time
+    </sql>
+</mapper>
